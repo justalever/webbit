@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :primary_content do %>
+  <h1>Submissions</h1>
 
-<h1>Submissions</h1>
+  <div id="submissions">
+    <% @submissions.each do |submission| %>
+      <%= render submission %>
+      <p>
+        <%= link_to "Show this submission", submission %>
+      </p>
+    <% end %>
+  </div>
 
-<div id="submissions">
-  <% @submissions.each do |submission| %>
-    <%= render submission %>
-    <p>
-      <%= link_to "Show this submission", submission %>
-    </p>
-  <% end %>
-</div>
+<% end %>
 
-<%= link_to "New submission", new_submission_path %>
+<% content_for :secondary_content do %>
+  <%= link_to "New submission", new_submission_path %>
+<% end %>
+
+<%= render "basic_layout" %>
