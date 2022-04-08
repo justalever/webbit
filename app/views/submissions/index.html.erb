@@ -13,14 +13,19 @@
         <%= render_svg "icons/empty" %>
       </div>
       <p class="mb-4">Wow such empty...</p>
-      <%= link_to "Create a new post", new_submission_path, class: "btn btn-indigo" %>
+      <%= link_to "Create a new submission", new_submission_path, class: "btn btn-indigo" %>
 
     </div>
   <% end %>
 <% end %>
 
 <% content_for :secondary_content do %>
-  <%= link_to "New submission", new_submission_path, class: "btn btn-indigo" %>
+  <div class="mb-6">
+    <%= link_to "New submission", new_submission_path, class: "btn btn-indigo block text-center" %>
+  </div>
+  <div>
+    <%= link_to "New community", new_community_path, class: "btn btn-white block text-center" %>
+  </div>
 <% end %>
 
 <%= render "basic_layout" %>
