@@ -67,7 +67,7 @@ class SubmissionsController < ApplicationController
         format.turbo_stream { render turbo_stream: turbo_stream.replace("#{dom_id(@submission)}_votes_count", @submission.total_vote_count)
       }
       else
-        format.html { redirect_to submission_path(@submission), alert: "You already voted for this submission."}
+         format.html { redirect_back fallback_location: root_path, alert: "You already voted for this submission."}
       end
     end
   end
@@ -79,7 +79,7 @@ class SubmissionsController < ApplicationController
         format.turbo_stream { render turbo_stream: turbo_stream.replace("#{dom_id(@submission)}_votes_count", @submission.total_vote_count)
       }
       else
-        format.html { redirect_to submission_path(@submission), alert: "You already voted for this submission."}
+        format.html { redirect_back fallback_location: root_path, alert: "You already voted for this submission."}
       end
     end
   end
