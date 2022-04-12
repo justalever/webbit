@@ -41,6 +41,12 @@ class CommentsController < ApplicationController
     redirect_to submissions_path(@submission)
   end
 
+  def upvote
+  end
+
+  def downvote
+  end
+
   private
 
     def set_submission
