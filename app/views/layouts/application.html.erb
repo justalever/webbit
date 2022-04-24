@@ -68,12 +68,14 @@
               </div>
             <% end %>
 
-            <div class="lg:flex-1 lg:w-auto w-full lg:mb-0 mb-3">
+            <div class="lg:flex-1 lg:w-auto w-full lg:mb-0 mb-3 relative">
               <div class="relative">
-                <input type="text" class="input pl-9" placeholder="Search webbit">
-                <div class="pointer-events-none absolute inset-y-5 left-2 flex items-center">
-                  <%= render_svg "icons/search", styles: "stroke-current w-6 h-6 text-gray-400" %>
-                </div>
+                <%= form_with(url: search_path, method: :get) do |form| %>
+                  <%= form.text_field :query, class: "input pl-9", placeholder: "Search Webbit" %>
+                  <div class="pointer-events-none absolute inset-y-5 left-2 flex items-center">
+                    <%= render_svg "icons/search", styles: "stroke-current w-6 h-6 text-gray-400" %>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>

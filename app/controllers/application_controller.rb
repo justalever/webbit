@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
     @communities = Community.all.order(:title)
   end
 
+
+  def search
+    @results = PgSearch.multisearch(params[:query])
+  end
+
   protected
 
   def configure_permitted_parameters
