@@ -37,4 +37,12 @@ Rails.application.routes.draw do
   root "submissions#index"
 
   resources :profiles, only: :show
+
+  resource :pricing
+  resources :checkouts
+  resources :premium_subscriptions
+  get "success", to: "checkouts#success"
+  resources :webhooks, only: :create
+  resources :billings, only: :create
+
 end

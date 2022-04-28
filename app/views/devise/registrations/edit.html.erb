@@ -52,6 +52,17 @@
 
   <% end %>
 
+  <div class="my-6">
+    <h3 class="mb-2 font-bold text-lg">Webbit Premium</h3>
+
+    <% if user_signed_in? && !current_user.subscribed? %>
+      <%= button_to "Subscribe to premium for $5 a month", checkouts_path, data: {turbo: false}, class: "text-white bg-indigo-600 px-3 py-4 rounded w-full block" %>
+    <% else %>
+      <%= button_to "Manage subscription", billings_path, data: {turbo: false}, class: "text-white bg-gray-600 px-3 py-4 block rounded w-full" %>
+    <% end %>
+
+  </div>
+
   <hr class="my-6"/>
 
   <h3 class="text-2xl font-bold mb-3">Cancel my account</h3>

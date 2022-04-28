@@ -16,7 +16,13 @@ class User < ApplicationRecord
 
   has_many :subscribed_submissions, through: :communities, source: :submissions
 
+  has_many :premium_subscriptions, dependent: :destroy
+
   acts_as_voter
+
+  def subscribed?
+    premium_subscriptions.where(status: 'active').any?
+  end
 
   private
 

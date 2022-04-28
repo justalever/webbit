@@ -82,5 +82,6 @@ gem "devise", "~> 4.8"
 gem "image_processing", ">= 1.2"
 gem "inline_svg", "~> 1.8"
 gem "sidekiq", "~> 6.4"
+gem "stripe", "~> 5.53"
 gem "validate_url"
 gem 'pg_search'
