@@ -1,4 +1,5 @@
 class Submission < ApplicationRecord
+  extend FriendlyId
   include PgSearch::Model
   include VotesCountable
 
@@ -15,6 +16,20 @@ class Submission < ApplicationRecord
   validate :content_exists
 
   acts_as_votable
+
+  friendly_id :slug_candidates, use: [:slugged, :finders]
+
+  def slug_candidates
+    [:title, [:title, :id]]
+  end
+
+  def should_generate_new_friendly_id?
+    if !slug?
+      title_changed?
+    else
+      false
+    end
+  end
 
   private
 

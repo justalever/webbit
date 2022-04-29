@@ -84,4 +84,5 @@ gem "inline_svg", "~> 1.8"
 gem "sidekiq", "~> 6.4"
 gem "stripe", "~> 5.53"
 gem "validate_url"
+gem 'friendly_id', '~> 5.4.0'
 gem 'pg_search'
