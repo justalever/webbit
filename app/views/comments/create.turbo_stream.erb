@@ -2,7 +2,7 @@
   <%= render "comments/comment", comment: @comment %>
 <% end %>
 
-<%= turbo_stream.update "#{dom_id(@submission)}_comments_form" do %>
+<%= turbo_stream.update "new_comments_form" do %>
   <%= render "comments/form", comment: Comment.new %>
 <% end %>
 

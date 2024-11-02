@@ -52,7 +52,7 @@
 
   <div class="mt-6 pt-6 border-t border-gray-300">
     <% if user_signed_in? %>
-      <div id="<%= dom_id(@submission) %>_comments_form">
+      <div id="new_comments_form">
         <%= render "comments/form", comment: Comment.new %>
       </div>
     <% else %>
