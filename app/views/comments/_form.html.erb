@@ -2,6 +2,6 @@
 </p>
 
 <%= form_with(model: [@submission, comment]) do |f| %>
-  <%= f.text_area :reply, class: "input min-h-[100px] resize-none", placeholder: "What are your thoughts?" %>
+  <%= f.text_area :reply, class: "input min-h-[100px] resize-none", placeholder: "What are your thoughts?", autocomplete: "off" %>
   <%= f.submit class: "btn btn-indigo text-base font-normal mt-6" %>
 <% end %>
