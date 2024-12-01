@@ -1,6 +1,6 @@
 # Webbit
 
-A _nearly_ full-feature Reddit clone build with Ruby on Rails. The app is the result of a course called Hello Rails at [hellorails.io](https://hellorails.io)
+A _nearly_ full-feature Reddit clone build with Ruby on Rails. The app is the result of a course called Hello Rails at [hellorails.io](https://hellorails.io). This branch is part of the **master** course which contains source code for the additional bonus modules.
 
 ## Modeling
 
